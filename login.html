@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to the Campus Navigator demo.">
+  <title>Login | Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+  <header class="navbar login-navbar">
+    <a href="index.html" class="logo"><img class="brand-logo" src="images/campus-navigator-logo.png" alt="Campus Navigator logo"><span>Campus<span class="logo-highlight">Navigator</span></span></a>
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </header>
+
+  <main class="login-main">
+    <section class="login-visual" aria-label="Campus Navigator introduction">
+      <div class="login-visual-overlay"></div>
+      <div class="login-visual-content">
+        <span class="hero-tag">✦ YOUR CAMPUS, ONE CLICK AWAY</span>
+        <h1>Your campus<br><span>journey starts here.</span></h1>
+        <p>Explore colleges, discover campus locations, and make every new place feel familiar.</p>
+        <div class="login-visual-note">⌖ &nbsp; Explore Campus. Find Your Way.</div>
+      </div>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-card">
+        <img class="login-card-logo" src="images/campus-navigator-logo.png" alt="Campus Navigator logo">
+        <span class="eyebrow">WELCOME BACK</span>
+        <h2>Login to your account</h2>
+        <p class="login-subtitle">Enter your details to continue to Campus Navigator.</p>
+
+        <form id="loginForm" novalidate>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <small class="field-error" id="emailError"></small>
+
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required minlength="6">
+            <button type="button" id="togglePassword" class="password-toggle" aria-label="Show password">Show</button>
+          </div>
+          <small class="field-error" id="passwordError"></small>
+
+          <button type="submit" class="login-submit">Login <span>→</span></button>
+          <p class="login-message" id="loginMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="login-demo-note"><strong>Student project demo</strong><br>This is a front-end login sample. It does not create accounts or verify credentials.</div>
+        <p class="login-footer-text">New to Campus Navigator? <a href="index.html#colleges">Explore colleges</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="login.js"></script>
+</body>
+</html>
